@@ -65,10 +65,16 @@ document.querySelector('.minClick').onclick = () => {
     document.querySelector('.outArray').innerHTML = myBuy;
     document.querySelector('.outArray2').innerHTML = valueMyBuy + 1;
   }
-  if (valueMyBuy == 1) {bodyColor('yellow');}if (valueMyBuy == 2) {bodyColor('green');}
-  if (valueMyBuy == 3) {bodyColor('white');}if (valueMyBuy == 4) {bodyColor('gray');}
-  if (valueMyBuy == 5) {bodyColor('black');}if (valueMyBuy == 6) {bodyColor('pink');}
-  if (valueMyBuy == 7) {bodyColor('purple');}if (valueMyBuy == 8) {bodyColor('gray');}
-  if (valueMyBuy == 9) {bodyColor('green');}if (valueMyBuy == 10) {bodyColor('red');}
-  if (valueMyBuy == 11) {bodyColor('yellow');}if (valueMyBuy == 0) {bodyColor('white');}
+  if (valueMyBuy == 1) {bodyColor('yellow');}
+  if (valueMyBuy == 2) {bodyColor('green');}
+  if (valueMyBuy == 3) {bodyColor('white');}
+  if (valueMyBuy == 4) {bodyColor('gray');}
+  if (valueMyBuy == 5) {bodyColor('black');}
+  if (valueMyBuy == 6) {bodyColor('pink');}
+  if (valueMyBuy == 7) {bodyColor('purple');}
+  if (valueMyBuy == 8) {bodyColor('gray');}
+  if (valueMyBuy == 9) {bodyColor('green');}
+  if (valueMyBuy == 10) {bodyColor('red');}
+  if (valueMyBuy == 11) {bodyColor('yellow');}
+  if (valueMyBuy == 0) {bodyColor('white');}
 }
