@@ -78,3 +78,19 @@ document.querySelector('.minClick').onclick = () => {
   if (valueMyBuy == 11) {bodyColor('yellow');}
   if (valueMyBuy == 0) {bodyColor('white');}
 }
+
+
+let h = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
+]
+let z = "";
+
+for (let i = 0; i < h.length; i++) {
+  for (let x = 0; x < h[i].length; x++) {
+    z += h[i][x] + ",";
+  }
+  z += "<br>";
+}
+document.querySelector(".outArray3").innerHTML = z;
