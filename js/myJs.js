@@ -80,17 +80,43 @@ document.querySelector('.minClick').onclick = () => {
 }
 
 
-let h = [
-  [1, 2, 3],
-  [4, 5, 6],
-  [7, 8, 9]
-]
-let z = "";
+// let h = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9]
+// ]
+// let z = "";
 
-for (let i = 0; i < h.length; i++) {
-  for (let x = 0; x < h[i].length; x++) {
-    z += h[i][x] + ",";
+// for (let i = 0; i < h.length; i++) {
+//   for (let x = 0; x < h[i].length; x++) {
+//     z += h[i][x] + ",";
+//   }
+//   z += "<br>";
+// }
+// document.querySelector(".outArray3").innerHTML = z;
+
+
+
+
+let dataMy = [
+  [11, 56, 87],
+  [1, 4, 9],
+  [98, 64, 2]
+];
+
+let sklad = "";
+
+for (let i = 0; i < dataMy.length; i++) {
+  for (let m = 0; m < dataMy[i].length; m++) {
+    if (dataMy[i][m] > 50) {
+    sklad += dataMy[i][m];
+    }
   }
-  z += "<br>";
+  // sklad += "<br>";
 }
-document.querySelector(".outArray3").innerHTML = z;
+
+// for(let p = 0; p < sklad.length; p++) {
+//   sklad = sklad[0] + sklad[p];
+// }
+
+document.querySelector(".outArray3").innerHTML = sklad;
