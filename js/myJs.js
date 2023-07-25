@@ -1,5 +1,7 @@
 "use strict";
 
+document.body.style.fontSize = "35px";
+
 let myBuy = [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 document.querySelector('.outArray').innerHTML = myBuy;
 
@@ -54,7 +56,6 @@ document.querySelector('.maxClick').onclick = () => {
   if (valueMyBuy == 12) {
     bodyColor('white');
   }
-  document.body.style.fontSize = "40px";
 }
 
 document.querySelector('.minClick').onclick = () => {
@@ -109,7 +110,7 @@ let sklad = "";
 for (let i = 0; i < dataMy.length; i++) {
   for (let m = 0; m < dataMy[i].length; m++) {
     if (dataMy[i][m] > 50) {
-    sklad += dataMy[i][m];
+    sklad += dataMy[i][m] + " ";
     }
   }
   // sklad += "<br>";
@@ -119,4 +120,49 @@ for (let i = 0; i < dataMy.length; i++) {
 //   sklad = sklad[0] + sklad[p];
 // }
 
-document.querySelector(".outArray3").innerHTML = sklad;
+// document.querySelector(".outArray3").innerHTML = sklad;
+
+
+
+
+
+
+//--------------------------------------------------------------------//
+                        //плавающая единица//
+
+
+
+let runing = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+let gou = 0;
+let interval = 100;
+let  strokeField = document.querySelector('.runone');
+console.log(runing.length);
+
+
+setTimeout(function maks() {
+  runing[gou] = 0;
+  gou++;
+  runing[gou] = 1;
+  strokeField.innerHTML = runing;
+  if(gou === runing.length - 1){
+    setTimeout(function maks2() {
+      runing[gou] = 0;
+      gou --;
+      runing[gou] = 1;
+      strokeField.innerHTML = runing;
+      console.log(gou);
+      if(gou > 0 ) {
+        setTimeout(maks2, interval);
+      }
+      if(gou === 0) {
+        setTimeout(maks, interval);
+      }
+    }, interval);
+  }
+  if (gou < runing.length - 1) {
+    setTimeout(maks, interval);
+  }
+  console.log(gou);
+}, interval);
+
+console.log(gou);
